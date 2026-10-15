@@ -1,0 +1,294 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.5387856",
+  "built": "2026-09-25",
+  "seed": 680,
+  "sizes": {
+    "train": 50000,
+    "val": 5000,
+    "test": 5000
+  },
+  "tasks": {
+    "code-and-comment-to-code": {
+      "zenodo_folder": "dataset/fine-tuning/new_large/code&comment-to-code",
+      "splits": {
+        "train": {
+          "rows": 50000,
+          "sha256": "e0a41b30247e5853dfebf6383a466287bbea09724ec82559cd563714d2eacf4e",
+          "sha256_zenodo_original": "915b610cc456988f195ad3c2b05bb5fe9df57d1772c9e5fdd3d58eb31a6e481c",
+          "bytes": 74163829,
+          "src_words": {
+            "mean": 75.7,
+            "p50": 65.0,
+            "p90": 140.0,
+            "p99": 210.0,
+            "max": 422
+          },
+          "tgt_words": {
+            "mean": 55.1,
+            "p50": 44.0,
+            "p90": 114.0,
+            "p99": 182.0,
+            "max": 333
+          },
+          "exact_duplicate_pairs": 0,
+          "duplicate_sources": 0,
+          "src_equals_tgt": 0,
+          "sources_with_START_END": 50000,
+          "bare_END_tokens": 0
+        },
+        "val": {
+          "rows": 5000,
+          "sha256": "90e1c500192999ce2d72527da763a3ff27dbc7f05e99cf03c85a2b9d3e94f496",
+          "sha256_zenodo_original": "ddc53e378347639ad26cf8367901c34659adb715c2bb26ab8ac31a94af08ad6e",
+          "bytes": 7305362,
+          "src_words": {
+            "mean": 74.6,
+            "p50": 64.0,
+            "p90": 139.0,
+            "p99": 207.0,
+            "max": 287
+          },
+          "tgt_words": {
+            "mean": 54.3,
+            "p50": 43.0,
+            "p90": 114.0,
+            "p99": 182.01000000000022,
+            "max": 245
+          },
+          "exact_duplicate_pairs": 0,
+          "duplicate_sources": 0,
+          "src_equals_tgt": 0,
+          "sources_with_START_END": 5000,
+          "bare_END_tokens": 0
+        },
+        "test": {
+          "rows": 5000,
+          "sha256": "359f1321e27541fac2ddaf2e038cc352952fa1898cc9af02ea95c5bfd6701144",
+          "sha256_zenodo_original": "de2dce98dfd491c485a30000fa32096c908627454846c467a38eaca1850e7f82",
+          "bytes": 7474075,
+          "src_words": {
+            "mean": 76.6,
+            "p50": 66.0,
+            "p90": 140.10000000000036,
+            "p99": 211.0,
+            "max": 329
+          },
+          "tgt_words": {
+            "mean": 55.8,
+            "p50": 45.0,
+            "p90": 114.0,
+            "p99": 182.0,
+            "max": 257
+          },
+          "exact_duplicate_pairs": 0,
+          "duplicate_sources": 0,
+          "src_equals_tgt": 0,
+          "sources_with_START_END": 5000,
+          "bare_END_tokens": 0
+        }
+      },
+      "overlap_with_train": {
+        "val": {
+          "pairs_in_train": 0,
+          "sources_in_train": 0,
+          "targets_in_train": 11
+        },
+        "test": {
+          "pairs_in_train": 0,
+          "sources_in_train": 0,
+          "targets_in_train": 11
+        }
+      },
+      "val_test_pair_overlap": 0
+    },
+    "code-to-comment": {
+      "zenodo_folder": "dataset/fine-tuning/new_large/code-to-comment",
+      "splits": {
+        "train": {
+          "rows": 50000,
+          "sha256": "4a6da2824fb8b6de263a706a67eade9f87d91d27749b4f0c673a2e4ce80bb945",
+          "sha256_zenodo_original": "9e69ea392d277f866b80f8909440e965356c23fee830eeb9a9d2e207911437b6",
+          "bytes": 38677194,
+          "src_words": {
+            "mean": 56.6,
+            "p50": 46.0,
+            "p90": 116.0,
+            "p99": 182.0,
+            "max": 271
+          },
+          "tgt_words": {
+            "mean": 18.1,
+            "p50": 13.0,
+            "p90": 38.0,
+            "p99": 89.0,
+            "max": 403
+          },
+          "exact_duplicate_pairs": 0,
+          "duplicate_sources": 0,
+          "src_equals_tgt": 0
+        },
+        "val": {
+          "rows": 5000,
+          "sha256": "75fcd633614b87dc13601e43e7800d6e79942df77e677e9831edfd3394b6f7f7",
+          "sha256_zenodo_original": "4325130c38a22625e00093433d56ee81ff0110dfdca4b6ffc61db59af78dacd2",
+          "bytes": 3809369,
+          "src_words": {
+            "mean": 55.9,
+            "p50": 45.5,
+            "p90": 115.0,
+            "p99": 180.01000000000022,
+            "max": 246
+          },
+          "tgt_words": {
+            "mean": 17.7,
+            "p50": 13.0,
+            "p90": 38.0,
+            "p99": 86.01000000000022,
+            "max": 277
+          },
+          "exact_duplicate_pairs": 0,
+          "duplicate_sources": 0,
+          "src_equals_tgt": 0
+        },
+        "test": {
+          "rows": 5000,
+          "sha256": "ebf587f0f9f25114b304e958d77de5cdfe9a43edbc031d14ccb42b53e3cad445",
+          "sha256_zenodo_original": "e3f40941591bef2c9ae4a9dfc7a8dd9e4b0eb53bdefbede86252b4517ef2b2b1",
+          "bytes": 3899566,
+          "src_words": {
+            "mean": 57.3,
+            "p50": 47.0,
+            "p90": 116.0,
+            "p99": 180.01000000000022,
+            "max": 245
+          },
+          "tgt_words": {
+            "mean": 18.3,
+            "p50": 13.0,
+            "p90": 39.0,
+            "p99": 96.01000000000022,
+            "max": 299
+          },
+          "exact_duplicate_pairs": 0,
+          "duplicate_sources": 0,
+          "src_equals_tgt": 0
+        }
+      },
+      "overlap_with_train": {
+        "val": {
+          "pairs_in_train": 0,
+          "sources_in_train": 0,
+          "targets_in_train": 241
+        },
+        "test": {
+          "pairs_in_train": 0,
+          "sources_in_train": 0,
+          "targets_in_train": 238
+        }
+      },
+      "val_test_pair_overlap": 0,
+      "most_common_val_targets_also_in_train": [
+        [
+          "final",
+          5
+        ],
+        [
+          "static import",
+          4
+        ],
+        [
+          "why?",
+          4
+        ],
+        [
+          "Extract the building of the ResponseMessage to it's own variable (in eclipse, select the text, right-click > refactor > extract local variable / select code + shift+alt+L). This will make the code a bit more readable, especially when you'll be passing in other things besides the ResponseMessage.",
+          3
+        ],
+        [
+          "try-with-resources?",
+          2
+        ],
+        [
+          "requireNonNull",
+          2
+        ]
+      ],
+      "targets_with_LINK_placeholder": 0
+    }
+  },
+  "selection": {
+    "train": {
+      "zenodo_rows": 134239,
+      "dropped": {
+        "LINK_placeholder_in_comment": 2501,
+        "missing_START_or_END_marker": 35,
+        "method_mismatch_between_tasks": 3
+      },
+      "eligible": 131700,
+      "sampled": 50000,
+      "repairs_before_sampling": {
+        "zenodo_rows": 134239,
+        "mangled_END_repaired": 1599,
+        "comment_restored": 125463,
+        "comment_already_verbatim": 8776
+      }
+    },
+    "val": {
+      "zenodo_rows": 16780,
+      "dropped": {
+        "LINK_placeholder_in_comment": 310,
+        "missing_START_or_END_marker": 7
+      },
+      "eligible": 16463,
+      "sampled": 5000,
+      "repairs_before_sampling": {
+        "zenodo_rows": 16780,
+        "mangled_END_repaired": 200,
+        "comment_restored": 15663,
+        "comment_already_verbatim": 1117
+      }
+    },
+    "test": {
+      "zenodo_rows": 16780,
+      "dropped": {
+        "LINK_placeholder_in_comment": 337,
+        "missing_START_or_END_marker": 5
+      },
+      "eligible": 16438,
+      "sampled": 5000,
+      "repairs_before_sampling": {
+        "zenodo_rows": 16780,
+        "mangled_END_repaired": 192,
+        "comment_restored": 15638,
+        "comment_already_verbatim": 1142
+      }
+    }
+  },
+  "cross_task_alignment": {
+    "train": {
+      "rows": 50000,
+      "cc_source_contains_c2c_method": 50000,
+      "cc_comment_identical_to_c2c_target": 50000
+    },
+    "val": {
+      "rows": 5000,
+      "cc_source_contains_c2c_method": 5000,
+      "cc_comment_identical_to_c2c_target": 5000
+    },
+    "test": {
+      "rows": 5000,
+      "cc_source_contains_c2c_method": 5000,
+      "cc_comment_identical_to_c2c_target": 5000
+    }
+  },
+  "example_test_row_0": {
+    "code-and-comment-to-code": {
+      "source": "<code>private ByteArrayInputStream uploadPackV2(String... inputLines) throws Exception { ByteArrayOutputStream send = new ByteArrayOutputStream(); PacketLineOut pckOut = new PacketLineOut(send); for (String line : inputLines) { if (line == PacketLineIn.END) { pckOut.end(); } else if (line == PacketLineIn.DELIM) { pckOut.writeDelim(); } else { pckOut.writeString(line); } } UploadPack up = new UploadPack(server); up.setUseProtocolV2(true); ByteArrayOutputStream recv = new ByteArrayOutputStream(); up.upload(new ByteArrayInputStream(send.toByteArray()), recv, null); ByteArrayInputStream recvStream = new ByteArrayInputStream(recv.toByteArray()); PacketLineIn pckIn = new PacketLineIn(recvStream); assertThat(pckIn.readString(), <START> is(\"version 2\")); <END> assertThat(pckIn.readString(), is(\"ls-refs\")); assertThat(pckIn.readString(), is(\"fetch=shallow\")); assertTrue(pckIn.readString() == PacketLineIn.END); return recvStream; }</code><technical_language>Let's add a constant for \"version 2\"</technical_language>",
+      "target": "private ByteArrayInputStream uploadPackV2(String... inputLines) throws Exception { ByteArrayOutputStream send = new ByteArrayOutputStream(); PacketLineOut pckOut = new PacketLineOut(send); for (String line : inputLines) { if (line == PacketLineIn.END) { pckOut.end(); } else if (line == PacketLineIn.DELIM) { pckOut.writeDelim(); } else { pckOut.writeString(line); } } UploadPack up = new UploadPack(server); up.setUseProtocolV2(true); ByteArrayOutputStream recv = new ByteArrayOutputStream(); up.upload(new ByteArrayInputStream(send.toByteArray()), recv, null); ByteArrayInputStream recvStream = new ByteArrayInputStream(recv.toByteArray()); PacketLineIn pckIn = new PacketLineIn(recvStream); assertThat(pckIn.readString(), is(\"version 2\")); assertThat( Arrays.asList(pckIn.readString(), pckIn.readString()), hasItems(\"ls-refs\", \"fetch=shallow\")); assertTrue(pckIn.readString() == PacketLineIn.END); return recvStream; }"
+    },
+    "code-to-comment": {
+      "source": "private ByteArrayInputStream uploadPackV2(String... inputLines) throws Exception { ByteArrayOutputStream send = new ByteArrayOutputStream(); PacketLineOut pckOut = new PacketLineOut(send); for (String line : inputLines) { if (line == PacketLineIn.END) { pckOut.end(); } else if (line == PacketLineIn.DELIM) { pckOut.writeDelim(); } else { pckOut.writeString(line); } } UploadPack up = new UploadPack(server); up.setUseProtocolV2(true); ByteArrayOutputStream recv = new ByteArrayOutputStream(); up.upload(new ByteArrayInputStream(send.toByteArray()), recv, null); ByteArrayInputStream recvStream = new ByteArrayInputStream(recv.toByteArray()); PacketLineIn pckIn = new PacketLineIn(recvStream); assertThat(pckIn.readString(), is(\"version 2\")); assertThat(pckIn.readString(), is(\"ls-refs\")); assertThat(pckIn.readString(), is(\"fetch=shallow\")); assertTrue(pckIn.readString() == PacketLineIn.END); return recvStream; }",
+      "target": "Let's add a constant for \"version 2\""
+    }
+  }
+}
