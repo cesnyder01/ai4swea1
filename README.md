@@ -1,3 +1,77 @@
+# CSCI 680 Assignment 1 Project Setup
+
+This repository contains the provided fine-tuning data package in
+`code-and-comment-to-code/` and `code-to-comment/`. Stage 1 adds the
+reproducible project scaffold, environment checks, and planning documents
+needed before any mining or model training begins.
+
+## What Stage 1 accomplishes
+
+- Confirms the local machine setup and records the baseline environment.
+- Creates the folder layout for corpus mining, tokenizer training, experiments, results, and docs.
+- Adds a lightweight environment-check script that can run before machine-learning packages are installed.
+- Sets up a project-local Python virtual environment for reproducible development.
+- Documents the assignment requirements and the next steps in plain language.
+
+## Current status
+
+- Existing fine-tuning data package: present; its current second-task files are
+  nested under `code-to-comment/code-to-comment/`, and the loader supports both
+  that layout and the documented top-level layout.
+- Part 1 pilot extractor: verified on one pinned MIT-licensed repository
+  (`adobe/log-parser`): 44 Java files, 479 methods, 269 with comments, 210
+  code-only, and 0 extraction failures. This is not the 300,000-instance target.
+- Local Git repository: present.
+- Python available: yes, Python 3.13.7.
+- Git available: yes.
+- NVIDIA GPU tooling: not detected locally.
+- Full corpus mining, tokenizer training, pretraining, fine-tuning, and evaluation: not started.
+
+## Recommended commands for Stage 1
+
+From the project root in PowerShell:
+
+```powershell
+py -3.13 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python .\src\check_environment.py
+pytest
+```
+
+If PowerShell blocks activation scripts, run this once for the current terminal session:
+
+```powershell
+Set-ExecutionPolicy -Scope Process RemoteSigned
+```
+
+## Roadmap
+
+1. Record candidate MIT-licensed Java repositories from GitHub Search.
+2. Run a tiny, inspectable mining pilot on one repository.
+3. Verify one Tree-sitter extraction pilot manually, then add filtering,
+   deduplication, and decontamination scripts.
+4. Train the assignment tokenizer on the mined corpus.
+5. Run pretraining, fine-tuning, and evaluation only after the data pipeline is stable.
+
+## Notes for this repository
+
+- Use relative paths from the project root.
+- Keep large datasets, checkpoints, and secrets out of Git.
+- Record decisions in `docs/decisions_log.md` as the project evolves.
+- Record data provenance in `docs/data_sources.md`.
+- Record AI assistance, prompts, model information, and response summaries in
+  `docs/ai_disclosure_log.md` for the assignment writeup.
+- Complete `corpus/manifests/repository_selection.csv` from your own GHS
+  searches before cloning or mining repositories.
+- The pilot output is local and ignored by Git; inspect it manually before
+  selecting additional repositories.
+
+## Existing package documentation
+
+The rest of this README documents the supplied fine-tuning data package and its provenance. That content is preserved below so the assignment data stays understandable and traceable.
+
 # Code review automation — fine-tuning data for CSCI 680 (Fall 2026)
 
 **Data card.** Built 2026-09-25 for the assignment *Does Pre-training Earn Its Keep?*

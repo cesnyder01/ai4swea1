@@ -1,0 +1,31 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.env
+*.log
+*.tmp
+*.bak
+
+# Local artifacts and large generated outputs
+corpus/raw_repos/*
+corpus/mined/*
+corpus/processed/*
+results/logs/*
+results/metrics/*
+results/predictions/*
+results/figures/*
+tokenizer/*
+
+# Keep placeholder files so empty directories stay in Git
+!corpus/raw_repos/.gitkeep
+!corpus/mined/.gitkeep
+!corpus/processed/.gitkeep
+!corpus/manifests/.gitkeep
+!results/logs/.gitkeep
+!results/metrics/.gitkeep
+!results/predictions/.gitkeep
+!results/figures/.gitkeep
+!tokenizer/.gitkeep

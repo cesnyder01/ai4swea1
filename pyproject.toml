@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csci680-ai4se-assignment1"
+version = "0.1.0"
+description = "Reproducible project scaffold for CSCI 680 Assignment 1"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "PyYAML>=6.0,<7.0",
+  "tree-sitter>=0.23,<0.24",
+  "tree-sitter-java>=0.23,<0.24",
+  "sentencepiece>=0.2,<0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0,<9.0",
+  "ruff>=0.6,<0.7",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"

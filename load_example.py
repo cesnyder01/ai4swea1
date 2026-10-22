@@ -5,6 +5,17 @@ from pathlib import Path
 PREFIX = {"code-and-comment-to-code": "code&comment2code: ",
           "code-to-comment": "code2comment: "}
 
+def task_file(root, task, split):
+    candidates = (
+        Path(root) / task / f"{split}.tsv",
+        Path(root) / task / task / f"{split}.tsv",
+    )
+    for path in candidates:
+        if path.is_file():
+            return path
+    expected = " or ".join(str(path) for path in candidates)
+    raise FileNotFoundError(f"Could not find {task} {split} data; checked {expected}")
+
 def read_tsv(path):
     with open(path, encoding="utf-8", newline="") as f:
         for line in f:
@@ -12,7 +23,7 @@ def read_tsv(path):
             yield src, tgt
 
 def load_task(root, task, split, with_prefix=True):
-    for src, tgt in read_tsv(Path(root) / task / f"{split}.tsv"):
+    for src, tgt in read_tsv(task_file(root, task, split)):
         yield (PREFIX[task] + src if with_prefix else src), tgt
 
 if __name__ == "__main__":

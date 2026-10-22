@@ -1,0 +1,26 @@
+seed: 680
+
+paths:
+  corpus_dir: corpus
+  raw_repos_dir: corpus/raw_repos
+  mined_dir: corpus/mined
+  processed_dir: corpus/processed
+  manifests_dir: corpus/manifests
+  tokenizer_dir: tokenizer
+  results_dir: results
+
+corpus:
+  min_tokens: 10
+  max_tokens: 512
+  target_instances: 300000
+  held_out_fraction: 0.01
+  span_mask_fraction: 0.15
+  mean_span_length: 3
+
+finetuning:
+  task_prefixes:
+    code_and_comment_to_code: "code&comment2code:"
+    code_to_comment: "code2comment:"
+  train_examples_per_task: 50000
+  validation_examples_per_task: 5000
+  test_examples_per_task: 5000
