@@ -19,8 +19,9 @@ This file tracks the requirements we are implementing for CSCI 680 Assignment 1.
   candidate is pending a commit SHA.
 - The current ordered pipeline contains 208,970 records within 10--512 tokens
   under the fresh 32,128-piece SentencePiece Unigram tokenizer.
-- The repository target of at least 300,000 usable instances has not been met;
-  91,030 additional usable records are still needed if the target is retained.
+- The current corpus contains 299,846 usable records. This is 154 below the
+  nominal 300,000 planning target, and the project decision is to proceed with
+  this corpus without adding more repositories.
 - The authoritative assignment PDF is not currently present in the workspace.
   Until it is provided, the supplied rubric requirements are tracked in
   [rubric_coverage.md](rubric_coverage.md).

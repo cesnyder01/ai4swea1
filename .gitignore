@@ -5,9 +5,24 @@ __pycache__/
 .ruff_cache/
 .mypy_cache/
 .env
+.env.*
+!.env.example
 *.log
 *.tmp
 *.bak
+
+# Secrets, credentials, and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.enc
+*credentials*
+*credential*
+*secrets*
+*secret*
 
 # Local artifacts and large generated outputs
 corpus/raw_repos/*
@@ -18,6 +33,25 @@ results/metrics/*
 results/predictions/*
 results/figures/*
 tokenizer/*
+
+# Large datasets, archives, model weights, and checkpoints
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.bz2
+*.xz
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+checkpoints/*
+results/checkpoints/*
 
 # Keep placeholder files so empty directories stay in Git
 !corpus/raw_repos/.gitkeep

@@ -308,6 +308,41 @@ approximately 6,146 usable records per repository. A simple estimate is about
 49 total repositories, or 15 additional repositories, but this is not a
 guarantee because repository yields and cross-repository duplication vary.
 
+The third checkpoint added the eight repositories listed in the
+`final-corpus-pipeline-batch3.json` input list. Its ordered counts were:
+
+| Stage | Before | Removed | After |
+|---|---:|---:|---:|
+| Extracted mined records | — | — | 488,012 |
+| Exact whitespace-normalized deduplication | 488,012 | 133,155 | 354,857 |
+| Near deduplication | 354,857 | 80,793 | 274,064 |
+| Approved parse-error filters | 274,064 | 70 | 273,994 |
+| Held-out decontamination | 273,994 | 9 | 273,985 |
+| SentencePiece length filter, 10--512 tokens | 273,985 | 16,819 | **257,166** |
+
+The current shortfall is 42,834 usable records. The fresh tokenizer audit is
+`results/metrics/final-tokenizer-lengths-batch3.json`, and the current usable
+corpus is `corpus/processed/final_pipeline_batch3/final.tokenizer-valid.jsonl`.
+
+The fourth checkpoint processed the next eight repositories. Its ordered
+counts were:
+
+| Stage | Before | Removed | After |
+|---|---:|---:|---:|
+| Extracted mined records | — | — | 572,745 |
+| Exact whitespace-normalized deduplication | 572,745 | 156,507 | 416,238 |
+| Near deduplication | 416,238 | 96,966 | 319,272 |
+| Approved parse-error filters | 319,272 | 71 | 319,201 |
+| Held-out decontamination | 319,201 | 9 | 319,192 |
+| SentencePiece length filter, 10--512 tokens | 319,192 | 19,346 | **299,846** |
+
+The current usable corpus is
+`corpus/processed/final_pipeline_batch4/final.tokenizer-valid.jsonl`, with
+length evidence in `results/metrics/final-tokenizer-lengths-batch4.json`.
+This is 154 records below the 300,000 target. Only the two unusually large
+selected repositories remain unprocessed:
+`rossturner/king-under-the-mountain` and `syd711/vpin-studio`.
+
 ## Parse-error review
 
 For `hollow-cube/mapmaker`, the parser-review report is:
