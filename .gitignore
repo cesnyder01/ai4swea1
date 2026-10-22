@@ -35,6 +35,8 @@ results/figures/*
 tokenizer/*
 
 # Large datasets, archives, model weights, and checkpoints
+code-and-comment-to-code/
+code-to-comment/
 *.zip
 *.7z
 *.rar
